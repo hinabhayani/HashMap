@@ -8,8 +8,6 @@ Two strings s and t are isomorphic if the characters in s can be replaced to get
 
 All occurrences of a character must be replaced with another character while preserving the order of characters. No two characters may map to the same character, but a character may map to itself.
 
- 
-
 Example 1:
 
 Input: s = "egg", t = "add"
@@ -23,16 +21,11 @@ Example 3:
 Input: s = "paper", t = "title"
 Output: true
 
-
-
-
 2.Minimum Index Sum of Two Lists
 
 Suppose Andy and Doris want to choose a restaurant for dinner, and they both have a list of favorite restaurants represented by strings.
 
 You need to help them find out their common interest with the least list index sum. If there is a choice tie between answers, output all of them with no order requirement. You could assume there always exists an answer.
-
- 
 
 Example 1:
 
@@ -44,14 +37,8 @@ Example 2:
 Input: list1 = ["Shogun","Tapioca Express","Burger King","KFC"], list2 = ["KFC","Shogun","Burger King"]
 Output: ["Shogun"]
 Explanation: The restaurant they both like and have the least index sum is "Shogun" with index sum 1 (0+1).
-
-
-
 3.
 Given a string s, find the first non-repeating character in it and return its index. If it does not exist, return -1.
-
- 
-
 Example 1:
 
 Input: s = "leetcode"
@@ -64,19 +51,14 @@ Example 3:
 
 Input: s = "aabb"
 Output: -1
- 
-
 Constraints:
 
 1 <= s.length <= 105
 s consists of only lowercase English letters.
 
-
 4.Intersection of Two Arrays II
 
 Given two integer arrays nums1 and nums2, return an array of their intersection. Each element in the result must appear as many times as it shows in both arrays and you may return the result in any order.
-
- 
 
 Example 1:
 
@@ -87,6 +69,23 @@ Example 2:
 Input: nums1 = [4,9,5], nums2 = [9,4,9,8,4]
 Output: [4,9]
 Explanation: [9,4] is also accepted.
+
+5.Contains Duplicate II
+
+Given an integer array nums and an integer k, return true if there are two distinct indices i and j in the array such that nums[i] == nums[j] and abs(i - j) <= k.
+
+Example 1:
+
+Input: nums = [1,2,3,1], k = 3
+Output: true
+Example 2:
+
+Input: nums = [1,0,1,1], k = 1
+Output: true
+Example 3:
+
+Input: nums = [1,2,3,1,2,3], k = 2
+Output: false
 
 
 
