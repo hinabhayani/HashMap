@@ -1,3 +1,25 @@
+class Solution {
+    public String[] findRestaurant(String[] list1, String[] list2) {
+        Map<Integer,List<String>> mapOfList1=new HashMap<Integer,List<String>>();
+        List<String> newList2=Arrays.asList(list2);
+         int sumOfIndex=0;
+        for(int i=0;i<list1.length;i++){
+           if(newList2.contains(list1[i])){
+                sumOfIndex=(newList2.indexOf(list1[i])+i);
+                 if(!mapOfList1.containsKey(sumOfIndex)){
+                     mapOfList1.put(sumOfIndex,new ArrayList<String>());
+                 }
+            mapOfList1.get(sumOfIndex).add(list1[i]);
+           }
+         }
+        int min=Collections.min(mapOfList1.keySet());
+        String[] str=new String[mapOfList1.get(min).size()];
+        return mapOfList1.get(min).toArray(str);
+        
+    }
+}
+
+
 /**  Isomorphic Strings
 
 Solution
@@ -21,26 +43,3 @@ Example 3:
 
 Input: s = "paper", t = "title"
 Output: true **/
-
-
-
-class Solution {
-    public String[] findRestaurant(String[] list1, String[] list2) {
-        Map<Integer,List<String>> mapOfList1=new HashMap<Integer,List<String>>();
-        List<String> newList2=Arrays.asList(list2);
-         int sumOfIndex=0;
-        for(int i=0;i<list1.length;i++){
-           if(newList2.contains(list1[i])){
-                sumOfIndex=(newList2.indexOf(list1[i])+i);
-                 if(!mapOfList1.containsKey(sumOfIndex)){
-                     mapOfList1.put(sumOfIndex,new ArrayList<String>());
-                 }
-            mapOfList1.get(sumOfIndex).add(list1[i]);
-           }
-         }
-        int min=Collections.min(mapOfList1.keySet());
-        String[] str=new String[mapOfList1.get(min).size()];
-        return mapOfList1.get(min).toArray(str);
-        
-    }
-}
